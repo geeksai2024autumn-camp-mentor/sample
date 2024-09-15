@@ -87,3 +87,38 @@
 </details>
 
 ---
+
+## 第3章: GitHub Pagesへのデプロイ
+
+### 手順
+
+1. GitHubリポジトリにプロジェクトをプッシュします。
+2. GitHub Pagesを有効にします。
+
+<details>
+<summary>有効化する設定方法</summary>
+
+![image](https://github.com/user-attachments/assets/651e5fd2-209c-4360-bed5-6f4cdc372ab2)
+
+</details>
+
+3. デプロイが完了するのを待ちます。
+
+<details>
+<summary>デプロイの確認方法</summary>
+
+![image](https://github.com/user-attachments/assets/1e0559f9-ce20-47fe-90af-b74e1207b780)
+![image](https://github.com/user-attachments/assets/725f2d80-6c6e-4bb8-93c8-752bb364deb6)
+
+</details>
+
+4. 公開リンクが作成されているので確認します。
+
+<details>
+<summary>公開リンクの確認方法</summary>
+
+![image](https://github.com/user-attachments/assets/fe9483d3-37ac-4d21-b6c7-f155aced4a94)
+
+</details>
+
+---
