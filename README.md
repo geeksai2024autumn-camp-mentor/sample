@@ -198,3 +198,29 @@ footer {
 </details>
 
 ---
+
+## 第5章: JavaScriptでのインタラクティブ機能の追加
+
+### 手順
+
+1. `script.js` に以下のJSをコピーして貼り付けます。
+
+ボタンを押すと、画面に表示されるテキストが変更されて、Xにポストするボタンが表示されるようになりました。
+
+<details>
+<summary>5-1 script.js ボタンを押して動きをつける</summary>
+
+```javascript
+// omikujiButtonがクリックされたとき
+document.getElementById("omikujiButton").addEventListener("click", function () {
+  // omikujiTitleをサンプルテキスト1に変更、omikujiDetailsをサンプルテキスト2に変更する
+  document.getElementById("omikujiTitle").textContent = "サンプルテキスト1";
+  document.getElementById("omikujiDetails").textContent = "サンプルテキスト2";
+
+  // postToXButtonボタンのhiddenを削除し、画面に表示させる
+  document.getElementById("postToXButton").classList.remove("hidden");
+});
+
+```
+
+</details>
