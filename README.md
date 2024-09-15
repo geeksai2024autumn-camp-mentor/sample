@@ -575,3 +575,47 @@ function postToX(finalItem) {
 </details>
 
 ---
+
+## おまけ: CSSを編集してリッチな画面に仕上げよう
+
+### 手順
+
+1. `styles.css` に、以下の基本的なCSSをコピーして貼り付けます。
+
+<details>
+<summary>styles.css スマホ版対応のCSSを一番下に追加</summary>
+
+```css
+/* スマホ版対応 */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem; /* スマホ画面での見出しのフォントサイズを縮小 */
+    padding: 0.5rem 0; /* 上下の余白も縮小 */
+  }
+
+  #omikuji {
+    font-size: 1rem;
+    padding: 5px;
+    width: 100%;
+  }
+
+  #omikujiTitle {
+    font-size: 1.2rem;
+  }
+
+  #omikujiDetails {
+    font-size: 1rem;
+  }
+
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+```
+
+</details>
+
+2. 自分好みの見た目に編集します。
+
+色を変えたり、ボタンの形を変えたり自由に編集します。
