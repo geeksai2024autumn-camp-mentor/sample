@@ -501,3 +501,77 @@ document.getElementById('omikujiButton').addEventListener('click', function() {
 2. 回転数や速度の数値を書き換えて、アニメーション速度を調整してみましょう。
 
 ---
+
+## 第7章: Xにポストする機能の追加
+
+### 手順
+
+`script.js` に以下の2つのJSをコピーして貼り付けます。
+
+<details>
+<summary>7-1 script.js Xにポストする関数を一番下に追加</summary>
+
+講演おみくじは自分でデプロイしたURLに書き換えます。
+
+```javascript
+function postToX(finalItem) {
+  const postText = `#技育祭 #講演おみくじ の結果は\n 「${finalItem.title}」でした！\n\n講演おみくじはこちら\nhttps://自分のURL\n\n技育祭の視聴申込はこちら\nhttps://talent.supporterz.jp/geeksai/2024autumn/`;
+
+  // 改行を含むテキストをURLエンコード
+  const encodedText = encodeURIComponent(postText);
+
+  // X投稿用のURLを生成
+  const postUrl = `https://x.com/intent/tweet?text=${encodedText}`;
+
+  // 新しいウィンドウでツイートページを開く
+  window.open(postUrl, "_blank");
+}
+```
+
+</details>
+
+<details>
+<summary>7-2 script.js spin処理を書き換える</summary>
+
+```javascript
+  // ---スピン処理ここから---
+  function spin() {
+    if (count < maxCount) {
+      // おみくじの内容をランダムに変更
+      index = Math.floor(Math.random() * items.length);
+
+      // おみくじの内容を画面に表示
+      document.getElementById("omikujiTitle").textContent = items[index].title;
+      document.getElementById("omikujiDetails").textContent =
+        `${items[index].time}, ${items[index].company}, ホール: ${items[index].hall}`;
+
+      count++;
+
+      // 回転の速度を徐々に遅くする
+      speed += 5;
+      setTimeout(spin, speed); // 繰り返す
+    } else {
+      // 最終結果の公演情報を取得
+      const finalItem = items[index];
+      // 最終結果の表示
+      document.getElementById("omikujiTitle").textContent = finalItem.title;
+      document.getElementById("omikujiDetails").textContent =
+        `${finalItem.time}, ${finalItem.company}, ホール: ${finalItem.hall}`;
+
+      // ボタンを有効化/表示する設定
+      omikujiButton.disabled = false; // おみくじボタンを有効化
+      postToXButton.classList.remove("hidden"); // ポストボタンを表示
+      postToXButton.disabled = false; // ポストボタンを有効化
+
+      // Xにポストするボタンを押したときの処理開始
+      postToXButton.addEventListener("click", function () {
+        // Xにポスト
+        postToX(finalItem);
+      });
+    }
+  }
+  // ---スピン処理ここまで---
+```
+</details>
+
+---

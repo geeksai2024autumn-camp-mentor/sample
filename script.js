@@ -200,6 +200,13 @@ document.getElementById('omikujiButton').addEventListener('click', function() {
       // ボタンを有効化/表示する設定
       omikujiButton.disabled = false; // おみくじボタンを有効化
       postToXButton.classList.remove("hidden"); // ポストボタンを表示
+      postToXButton.disabled = false; // ポストボタンを有効化
+
+      // Xにポストするボタンを押したときの処理開始
+      postToXButton.addEventListener("click", function () {
+        // Xにポスト
+        postToX(finalItem);
+      });
     }
   }
   // ---スピン処理ここまで---
@@ -207,3 +214,16 @@ document.getElementById('omikujiButton').addEventListener('click', function() {
   // スピン処理開始
   spin();
 });
+
+function postToX(finalItem) {
+  const postText = `#技育祭 #講演おみくじ の結果は\n 「${finalItem.title}」でした！\n\n講演おみくじはこちら\nhttps://geeksai2024autumn-camp-mentor.github.io/sample/\n\n技育祭の視聴申込はこちら\nhttps://talent.supporterz.jp/geeksai/2024autumn/`;
+
+  // 改行を含むテキストをURLエンコード
+  const encodedText = encodeURIComponent(postText);
+
+  // X投稿用のURLを生成
+  const postUrl = `https://x.com/intent/tweet?text=${encodedText}`;
+
+  // 新しいウィンドウでツイートページを開く
+  window.open(postUrl, "_blank");
+}
