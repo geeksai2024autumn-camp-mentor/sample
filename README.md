@@ -23,6 +23,16 @@
    - https://docs.github.com/ja/get-started/start-your-journey/creating-an-account-on-github
    - https://docs.github.com/ja/get-started/getting-started-with-git/set-up-git
 
+### GitHubリポジトリの作成
+
+1. GitHubプロフィールのRepositorysタブを開きます。
+2. 「New」ボタンでリポジトリ作成画面を開きます。
+   - 「Public」を選択します。Publicにしないと、GitHub Pagesでのデプロイができないので注意してください。
+   - Initialize this repository with: Add a README file にチェックをつけます。
+3. 「Create repository」ボタンでリポジトリが作成できます。
+
+GitHubの公式ドキュメントはこちらです：[新しいリポジトリの作成](https://docs.github.com/ja/repositories/creating-and-managing-repositories/creating-a-new-repository)
+
 ### 作成するファイル
 
 1. プロジェクト用フォルダを作成し、以下のファイルを準備します。
