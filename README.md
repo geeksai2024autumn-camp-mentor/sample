@@ -243,6 +243,7 @@ document.getElementById("omikujiButton").addEventListener("click", function () {
 ```javascript
 document.getElementById('omikujiButton').addEventListener('click', function() {
   // 講演情報の配列を作成
+  // ---公演情報ここから---
   const items = [
     {
       title: "ひろゆきと10人の学生エンジニア〜論破するのか、されるのか〜",
@@ -258,6 +259,7 @@ document.getElementById('omikujiButton').addEventListener('click', function() {
       hall: "A",
     }
   ];
+  // ---公演情報ここまで---
 
   // おみくじの内容をランダムに変更
   const index = Math.floor(Math.random() * items.length);
@@ -281,6 +283,7 @@ document.getElementById('omikujiButton').addEventListener('click', function() {
 
 ```javascript
   // 講演情報の配列を作成
+  // ---公演情報ここから---
   const items = [
     {
       title: "ひろゆきと10人の学生エンジニア〜論破するのか、されるのか〜",
@@ -439,6 +442,7 @@ document.getElementById('omikujiButton').addEventListener('click', function() {
       hall: "A",
     },
   ];
+  // ---公演情報ここまで---
 ```
 
 </details>
@@ -457,6 +461,14 @@ document.getElementById('omikujiButton').addEventListener('click', function() {
 <summary>script.js ルーレット形式のアニメーション</summary>
 
 ```javascript
+document.getElementById('omikujiButton').addEventListener('click', function() {
+  // 講演情報の配列を作成
+  // ---公演情報ここから---
+
+  // 省略
+
+  // ---公演情報ここまで---
+
   // ボタンを読み込む
   const omikujiButton = document.getElementById("omikujiButton");
   const postToXButton = document.getElementById("postToXButton");
@@ -504,6 +516,7 @@ document.getElementById('omikujiButton').addEventListener('click', function() {
 
   // スピン処理開始
   spin();
+});
 ```
 
 </details>
