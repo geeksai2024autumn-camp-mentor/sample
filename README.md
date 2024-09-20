@@ -384,7 +384,7 @@ document.getElementById('omikujiButton').addEventListener('click', function() {
       hall: "A",
     },
     {
-      title: "2300万DL数を突破したタクシーアプリ『GO』の開発秘話とこれから",
+      title: "2400万DL数を突破したタクシーアプリ『GO』の開発秘話とこれから",
       time: "9月21日 14:30",
       company: "GO株式会社",
       hall: "C",
