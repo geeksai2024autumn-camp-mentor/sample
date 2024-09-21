@@ -49,9 +49,8 @@ GitHubの公式ドキュメントはこちらです：[新しいリポジトリ�
 
 ### 手順
 
-1. プロジェクトフォルダに `index.html` を作成します。
-2. 以下の基本的なHTML構造をコピーして貼り付けます。
-3. index.htmlをchromeなどのブラウザで開いて確認します。
+1. 以下の基本的なHTML構造をコピーして貼り付けます。
+2. index.htmlをchromeなどのブラウザで開いて確認します。
 
 <details>
 <summary>index.html のコード</summary>
@@ -62,7 +61,7 @@ GitHubの公式ドキュメントはこちらです：[新しいリポジトリ�
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>おみくじポップアップ</title>
+    <title>講演おみくじ</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
